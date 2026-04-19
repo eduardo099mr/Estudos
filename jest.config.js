@@ -1,4 +1,4 @@
-const jestNext = require("Next/Jest");
+const jestNext = require("next/jest");
 const dotenv = require("dotenv");
 dotenv.config({
   path: ".env.development",

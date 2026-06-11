@@ -7,6 +7,8 @@
     "dev": "npm run services:up && npm run waitpg && next dev",
     "services:up": "docker compose -f infra/compose.yaml up -d",
     "services:down": "docker compose -f infra/compose.yaml down",
+    "lint:prettier:check": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
     "test": "npm run services:up && concurrently -n next,jest --hide next -s command-jest -k 'sleep 5; next dev' 'jest --runInBand --verbose'",
     "test:watch": "jest --watchAll --runInBand",
     "migrations:create": "node-pg-migrate -m infra/migrations create",
